@@ -6,7 +6,7 @@
 /*   By: mzbair <mzbair@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 01:11:37 by mzbair            #+#    #+#             */
-/*   Updated: 2026/11/12 01:23:35 by mzbair           ###   ########.fr       */
+/*   Updated: 2026/11/12 01:28:47 by mzbair           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,5 @@ int	put_char(va_list ap)
 	char	c;
 
 	c = va_arg(ap, int);
-	write(1, &c, 1);
-	return (1);
+	return (write(1, &c, 1));
 }
