@@ -6,7 +6,7 @@
 /*   By: mzbair <mzbair@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 13:42:11 by mzbair            #+#    #+#             */
-/*   Updated: 2026/11/12 23:42:16 by mzbair           ###   ########.fr       */
+/*   Updated: 2026/11/16 11:49:21 by mzbair           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,12 @@
 # include <unistd.h>
 
 int	ft_printf(const char *format, ...);
-int	print_forma(va_list ap, char c);
-int put_char(va_list ap);
-int put_str(va_list ap);
+int	print_format(va_list ap, char c);
+int	put_char(va_list ap);
+int	put_str(va_list ap);
+int	put_point(va_list ap);
+int	put_nbr(va_list ap);
+int	put_unsigned_nbr(va_list ap);
+int	put_hex(va_list ap, int is_upper_case);
 
 #endif
