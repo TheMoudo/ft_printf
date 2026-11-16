@@ -45,7 +45,7 @@ int	print_format(va_list ap, char c)
 {
 	int	bt_count;
 
-	bt_count = 0;
+	bt_count = -1;
 	if (c == 'c')
 		bt_count = put_char(ap);
 	else if (c == 's')
