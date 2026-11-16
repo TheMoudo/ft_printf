@@ -19,6 +19,8 @@ int	put_str(va_list ap)
 
 	len = 0;
 	str = va_arg(ap, char *);
+	if (!str)
+		return (write(1, "(null)",6));
 	while (str[len])
 		len++;
 	return (write(1, str, len));
