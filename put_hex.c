@@ -6,7 +6,7 @@
 /*   By: mzbair <mzbair@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 09:58:49 by mzbair            #+#    #+#             */
-/*   Updated: 2026/11/16 11:24:41 by mzbair           ###   ########.fr       */
+/*   Updated: 2026/11/16 16:00:21 by mzbair           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	put_hex(va_list ap, int is_upper_case)
 	i = len -1;
 	while (i >= 0)
 	{
-		str_nb[i--] = hex_base[(nb % 16)];
+		str_nb[i--] = hex_base[nb % 16];
 		nb = nb / 16;
 	}
 	return (write(1, str_nb, len));
