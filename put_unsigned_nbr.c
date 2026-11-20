@@ -25,14 +25,14 @@ static int	calcule_len(unsigned int nb)
 	return (len);
 }
 
-int	put_unsigned_nbr(va_list ap)
+int	put_unsigned_nbr(va_list *ap)
 {
 	unsigned int	nb;
 	char			str_nb[10];
 	int				len;
 	int				i;
 
-	nb = va_arg(ap, unsigned int);
+	nb = va_arg(*ap, unsigned int);
 	len = calcule_len(nb);
 	i = len - 1;
 	while (i >= 0)

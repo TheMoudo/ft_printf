@@ -12,13 +12,13 @@
 
 #include "ft_printf.h"
 
-int	put_str(va_list ap)
+int	put_str(va_list *ap)
 {
 	char	*str;
 	int		len;
 
 	len = 0;
-	str = va_arg(ap, char *);
+	str = va_arg(*ap, char *);
 	if (!str)
 		return (write(1, "(null)", 6));
 	while (str[len])

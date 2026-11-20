@@ -25,7 +25,7 @@ static int	calcule_len(unsigned long nb)
 	return (len);
 }
 
-int	put_point(va_list ap)
+int	put_point(va_list *ap)
 {
 	unsigned long	ptr;
 	char			point_buffer[18];
@@ -33,7 +33,7 @@ int	put_point(va_list ap)
 	int				len;
 	int				i;
 
-	ptr = (unsigned long) va_arg(ap, void *);
+	ptr = (unsigned long) va_arg(*ap, void *);
 	hex_base = "0123456789abcdef";
 	if (ptr == 0)
 		return (write(1, "(nil)", 5));

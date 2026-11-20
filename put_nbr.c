@@ -35,14 +35,14 @@ static int	write_positf_nb(long nb)
 	return (write(1, str_nb, len));
 }
 
-int	put_nbr(va_list ap)
+int	put_nbr(va_list *ap)
 {
 	long	nb;
 	int		signe;
 	int		is_print;
 
 	signe = 0;
-	nb = va_arg(ap, int);
+	nb = va_arg(*ap, int);
 	if (nb < 0)
 	{
 		nb = -nb;

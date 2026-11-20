@@ -25,7 +25,7 @@ static int	calcule_len(unsigned int nb)
 	return (len);
 }
 
-int	put_hex(va_list ap, int is_upper_case)
+int	put_hex(va_list *ap, int is_upper_case)
 {
 	unsigned int	nb;
 	char			*hex_base;
@@ -33,7 +33,7 @@ int	put_hex(va_list ap, int is_upper_case)
 	int				len;
 	int				i;
 
-	nb = va_arg(ap, unsigned int);
+	nb = va_arg(*ap, unsigned int);
 	if (is_upper_case)
 		hex_base = "0123456789ABCDEF";
 	else

@@ -27,7 +27,7 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
-			is_print = print_format(ap, format[++i]);
+			is_print = print_format(&ap, format[++i]);
 		else
 			is_print = write(1, &format[i], 1);
 		if (is_print == -1)
@@ -41,7 +41,7 @@ int	ft_printf(const char *format, ...)
 	return (bt_count);
 }
 
-int	print_format(va_list ap, char c)
+int	print_format(va_list *ap, char c)
 {
 	int	bt_count;
 
